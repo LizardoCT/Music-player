@@ -9,6 +9,15 @@ const progressContainer = document.getElementById('progress-container');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
+const hora = document.getElementById('hora');
+
+const interval = setInterval(() => {
+
+    const horaActual = new Date();
+    hora.textContent = horaActual.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
+}, 1000);
+
 
 // music
 const songs = [
@@ -19,7 +28,7 @@ const songs = [
     },
     {
         name: 'jacinto-2',
-        displayName: 'Seven Nation Army (Remix)',
+        displayName: 'Seven Nation (Remix)',
         artist: 'Nene Design',
     },
     {
@@ -90,30 +99,30 @@ function nextSong() {
 // On load - Select first song
 loadSong(songs[songIndex]);
 
-// Update Progress Bar and time
+// Update Progress Bar & Time
 function updateProgressBar(e) {
     if (isPlaying) {
         const { duration, currentTime } = e.srcElement;
-        // update progress bar width
+        // Update progress bar width
         const progressPercent = (currentTime / duration) * 100;
-        progress.style.width = `${progressPercent}%`
+        progress.style.width = `${progressPercent}%`;
         // Calculate display for duration
         const durationMinutes = Math.floor(duration / 60);
         let durationSeconds = Math.floor(duration % 60);
         if (durationSeconds < 10) {
-            durationSeconds = `0${durationSeconds}`
+            durationSeconds = `0${durationSeconds}`;
         }
-        // delay switching duration element to avoid NaN
+        // Delay switching duration Element to avoid NaN
         if (durationSeconds) {
             durationEl.textContent = `${durationMinutes}:${durationSeconds}`;
         }
-        // Calculate display for current time
+        // Calculate display for currentTime
         const currentMinutes = Math.floor(currentTime / 60);
         let currentSeconds = Math.floor(currentTime % 60);
         if (currentSeconds < 10) {
-            currentSeconds = `0${currentSeconds}`
-            currentTimeEl.textContent = `${currentMinutes}:${currentSeconds}`;
+            currentSeconds = `0${currentSeconds}`;
         }
+        currentTimeEl.textContent = `${currentMinutes}:${currentSeconds}`;
     }
 }
 
