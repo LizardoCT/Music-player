@@ -1,4 +1,5 @@
 const image = document.querySelector('img');
+// const image = document.getElementById('img')
 const title = document.getElementById('title');
 const artist = document.getElementById('artist');
 const music = document.querySelector('audio');
@@ -22,24 +23,29 @@ const interval = setInterval(() => {
 // music
 const songs = [
     {
-        name: 'jacinto-1',
-        displayName: 'Electric Chill Machine',
-        artist: 'Nene Design',
+        name: 'music-1',
+        displayName: 'Pumped Up Kicks',
+        artist: 'Le Tongue',
     },
     {
-        name: 'jacinto-2',
-        displayName: 'Seven Nation (Remix)',
-        artist: 'Nene Design',
+        name: 'music-2',
+        displayName: 'Pirates/Game of Thrones',
+        artist: 'Eshan Denipitiya & David Loke',
     },
     {
-        name: 'jacinto-3',
-        displayName: 'Goodnight, Disco Queen',
-        artist: 'Nene Design',
+        name: 'music-3',
+        displayName: 'Chandelier',
+        artist: 'Twenty One Two',
     },
     {
-        name: 'metric-1',
-        displayName: 'Front Row (Remix)',
-        artist: 'Metric/Nene Design',
+        name: 'music-4',
+        displayName: 'Pumped Up Kicks',
+        artist: 'Ralph Saenz - John Murphy',
+    },
+    {
+        name: 'music-5',
+        displayName: 'Wonderwall',
+        artist: 'Twenty One Two',
     },
 ]
 
@@ -70,7 +76,7 @@ function loadSong(song) {
     title.textContent = song.displayName;
     artist.textContent = song.artist;
     music.src = `music/${song.name}.mp3`;
-    image.src = `img/${song.name}.jpg`;
+    image.src = `img/${song.name}.jpeg`;
 }
 
 // Current Song
