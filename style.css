@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -14,7 +15,29 @@ body {
   font-family: League Spartan, sans-serif;
   font-size: 12px;
 }
-
+.signature{
+  position: absolute;
+  color: whitesmoke;
+  font-size: 18px;
+  left: 10vw;
+  bottom: -40vh;
+}
+.signature a{
+  margin-left: 4px;
+  position: absolute;
+  color: whitesmoke;
+  font-size: 18px;
+  text-decoration: none;
+  font-style: italic;
+}.signature a:hover{
+  color: #a4ff80;
+}
+.bmc{
+  width: auto;
+  height: 35px !important;
+  bottom: -100%;
+  position: absolute;
+}
 .player-container {
   height: 600px;
   width: 290px;
@@ -328,7 +351,9 @@ button{
     top: -10px;
     margin: 30px 0 !important;
   }
-
+  .signature{
+    display: none;
+  }
   .progress-container{
     height: 20%;
     border-bottom-left-radius: 0;

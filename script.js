@@ -11,6 +11,7 @@ const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
 const hora = document.getElementById('hora');
+const body = document.querySelector('body')
 
 const interval = setInterval(() => {
 
@@ -26,26 +27,31 @@ const songs = [
         name: 'music-1',
         displayName: 'Pumped Up Kicks',
         artist: 'Le Tongue',
+        color: "#870101",
     },
     {
         name: 'music-2',
         displayName: 'Pirates/Game of Thrones',
         artist: 'Eshan Denipitiya & David Loke',
+        color: "#935D28",
     },
     {
         name: 'music-3',
         displayName: 'Chandelier',
         artist: 'Twenty One Two',
+        color: "#63786E",
     },
     {
         name: 'music-4',
         displayName: 'Pumped Up Kicks',
         artist: 'Ralph Saenz - John Murphy',
+        color: "#EBDE8A",
     },
     {
         name: 'music-5',
         displayName: 'Wonderwall',
         artist: 'Twenty One Two',
+        color: "#111111",
     },
 ]
 
@@ -77,6 +83,7 @@ function loadSong(song) {
     artist.textContent = song.artist;
     music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.name}.jpeg`;
+    document.body.style.background = `${song.color}`
 }
 
 // Current Song
