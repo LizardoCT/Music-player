@@ -32,12 +32,7 @@ body {
 }.signature a:hover{
   color: #a4ff80;
 }
-.bmc{
-  width: auto;
-  height: 35px !important;
-  bottom: -100%;
-  position: absolute;
-}
+
 .player-container {
   height: 600px;
   width: 290px;
@@ -50,9 +45,7 @@ body {
   align-items: center;
   outline: 1px solid #A7A7A6;
   position: relative;;
-  overflow: hidden;
 } 
-
 .hora{
   color: whitesmoke;
   font-size: 12.5px;
@@ -61,7 +54,6 @@ body {
   top: 13px;
   left: 30px;
 }
-
 .nav-icons{
   position: absolute;
   z-index: 100;
@@ -187,6 +179,7 @@ h3 {
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
   position: relative;
+  overflow: hidden;
 }
 
 .progress {
