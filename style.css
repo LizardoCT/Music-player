@@ -363,24 +363,42 @@ button {
     display: none;
   }
 
+  .option-icons .c-heart {
+    top: 50px;
+    right: 15px;
+  }
+
+  .option-icons .fa-angle-down {
+    top: 50px;
+    left: 25px;
+  }
+
   .img-container {
-    margin: 80px !important;
-    position: relative;
-    left: -20px;
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .img-container img {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   h3 {
-    font-size: 15px;
+    font-size: 20px;
     padding-bottom: 20px;
+  }
+
+  button {
+    width: 120px;
+    padding: 15px;
+    font-size: .9rem;
   }
 
   .player-controls {
@@ -393,7 +411,7 @@ button {
   }
 
   .progress-container {
-    height: 20%;
+    height: 25%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     margin-top: 10%;
